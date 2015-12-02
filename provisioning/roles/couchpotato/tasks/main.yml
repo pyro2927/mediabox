@@ -5,5 +5,5 @@
     - python
   sudo: yes
 
-- git: repo=git://github.com/RuudBurger/CouchPotatoServer.git dest=/root/couchpotato
+- git: repo=https://github.com/RuudBurger/CouchPotatoServer.git dest=/root/couchpotato
   sudo: yes

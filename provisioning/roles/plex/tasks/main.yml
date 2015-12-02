@@ -1,0 +1,4 @@
+---
+- git: repo=https://github.com/mrworf/plexupdate.git dest=/root/plexupdate
+  sudo: yes
+  notify: run plexupdate

@@ -1,0 +1,9 @@
+---
+- apt: name={{item}}
+  with_items:
+    - git-core
+    - python
+  sudo: yes
+
+- git: repo=git://github.com/RuudBurger/CouchPotatoServer.git dest=/root/couchpotato
+  sudo: yes

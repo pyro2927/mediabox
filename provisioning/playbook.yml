@@ -2,5 +2,6 @@
 - hosts: all
   roles:
     - common
+    - couchpotato
     - plex
     - sonarr

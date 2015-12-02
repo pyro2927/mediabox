@@ -1,0 +1,10 @@
+---
+- apt_repository: repo='ppa:transmissionbt/ppa' state=present
+  sudo: yes
+
+- apt: name={{item}}
+  with_items:
+    - transmission-cli
+    - transmission-common
+    - transmission-daemon
+  sudo: yes

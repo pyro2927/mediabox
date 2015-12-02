@@ -1,0 +1,4 @@
+---
+- name: start nzbdrone
+  service: name=nzbdrone state=started
+  sudo: yes

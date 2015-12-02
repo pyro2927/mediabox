@@ -1,6 +1,6 @@
 ---
 - name: run plexupdate
-  command: /bin/bash ./plexupdate.sh -p
+  command: /bin/bash ./plexupdate.sh -p -a
   args:
     chdir: /root/plexupdate/
   sudo: yes

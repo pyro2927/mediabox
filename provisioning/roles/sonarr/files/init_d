@@ -41,7 +41,7 @@ fi
 do_start() {
         RETVAL=1
         if [ -e ${PIDFILE} ]; then
-                if ! kill -0 $(cat ${PIDFILE}) &> /dev/null; then
+                if ! kill -0 $(cat ${PIDFILE}) > /dev/null 2>&1; then
                         rm -f $PIDFILE
                 fi
         fi

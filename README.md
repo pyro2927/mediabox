@@ -2,7 +2,8 @@
 
 Ansible scripts to automatically install:
 
-* [Plex]
-* [Sickbeard]
-* [Sonarr]
-* [CouchPotato]
+* [CouchPotato](https://couchpota.to/)
+* [Plex](https://plex.tv/)
+* [Sickbeard](http://sickbeard.com/)
+* [Sonarr](https://sonarr.tv/)
+* [Transmission](http://www.transmissionbt.com/)

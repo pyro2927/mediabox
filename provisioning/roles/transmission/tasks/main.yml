@@ -8,3 +8,10 @@
     - transmission-common
     - transmission-daemon
   sudo: yes
+
+- copy: src=nginx_config dest=/etc/nginx/sites-available/transmission
+  sudo: yes
+
+- file: src=/etc/nginx/sites-available/transmission dest=/etc/nginx/sites-enabled/transmission state=link
+  sudo: yes
+  notify: restart nginx

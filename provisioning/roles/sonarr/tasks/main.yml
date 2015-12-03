@@ -18,3 +18,10 @@
 - service: name=nzbdrone enabled=yes
   sudo: yes
   notify: start nzbdrone
+
+- copy: src=nginx_config dest=/etc/nginx/sites-available/sonarr
+  sudo: yes
+
+- file: src=/etc/nginx/sites-available/sonarr dest=/etc/nginx/sites-enabled/sonarr state=link
+  sudo: yes
+  notify: restart nginx

@@ -1,0 +1,4 @@
+---
+- name: start couchpotato
+  service: name=couchpotato state=started
+  sudo: yes

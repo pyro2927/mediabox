@@ -2,6 +2,9 @@
 - apt: name={{item}}
   with_items:
     - curl
+    - fail2ban
     - git
+    - htop
+    - rsync
     - vim
   sudo: yes

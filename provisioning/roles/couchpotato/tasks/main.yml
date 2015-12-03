@@ -7,3 +7,21 @@
 
 - git: repo=https://github.com/RuudBurger/CouchPotatoServer.git dest=/root/couchpotato
   sudo: yes
+
+- copy: src=init_d dest=/etc/init.d/couchpotato mode=0744
+  sudo: yes
+  notify: start couchpotato
+
+- copy: src=defaults dest=/etc/default/couchpotato
+  sudo: yes
+
+- service: name=couchpotato enabled=yes
+  sudo: yes
+  notify: start couchpotato
+
+- copy: src=nginx_config dest=/etc/nginx/sites-available/couchpotato
+  sudo: yes
+
+- file: src=/etc/nginx/sites-available/couchpotato dest=/etc/nginx/sites-enabled/couchpotato state=link
+  sudo: yes
+  notify: restart nginx

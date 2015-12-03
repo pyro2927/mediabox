@@ -9,3 +9,6 @@
 - file: src=/etc/nginx/sites-available/plex dest=/etc/nginx/sites-enabled/plex state=link
   sudo: yes
   notify: restart nginx
+
+- cron: name="update plex weekly" weekday=2 hour=2 minute=0 job="/bin/bash /root/plexupdate/plexupdate.sh -p -a"
+  sudo: yes

@@ -4,8 +4,10 @@
     - cifs-utils
     - curl
     - fail2ban
+    - gcc
     - git
     - htop
+    - make
     - rsync
     - vim
   sudo: yes

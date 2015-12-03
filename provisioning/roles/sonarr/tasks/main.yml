@@ -1,7 +1,4 @@
 ---
-- apt_key: keyserver=keyserver.ubuntu.com id='0xFDA5DFFC' keyring='/etc/apt/trusted.gpg' state=present
-  sudo: yes
-
 - apt_repository: repo='deb http://apt.sonarr.tv/ master main' state=present
   sudo: yes
 

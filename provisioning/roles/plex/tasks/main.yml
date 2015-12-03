@@ -10,5 +10,5 @@
   sudo: yes
   notify: restart nginx
 
-- cron: name="update plex weekly" weekday=2 hour=2 minute=0 job="/bin/bash /root/plexupdate/plexupdate.sh -p -a"
+- cron: name="update plex weekly" weekday=2 hour=2 minute=0 job="/bin/bash /root/plexupdate/plexupdate.sh -p -a -d"
   sudo: yes

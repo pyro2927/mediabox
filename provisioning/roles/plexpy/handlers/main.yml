@@ -1,0 +1,4 @@
+---
+- name: start plexpy
+  service: name=plexpy state=started
+  sudo: yes

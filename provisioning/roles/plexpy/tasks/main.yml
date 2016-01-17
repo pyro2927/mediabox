@@ -1,0 +1,24 @@
+---
+- git: repo=https://github.com/drzoidberg33/plexpy.git dest=/opt/plexpy
+  sudo: yes
+
+- user: name=plexpy system=yes
+  sudo: yes
+
+- file: path=/opt/plexpy owner=plexpy group=nogroup
+  sudo: yes
+
+- copy: src=init_d dest=/etc/init.d/plexpy mode=0744
+  sudo: yes
+  notify: start plexpy
+
+- service: name=plexpy enabled=yes
+  sudo: yes
+  notify: start plexpy
+
+- copy: src=nginx_config dest=/etc/nginx/sites-available/plexpy
+  sudo: yes
+
+- file: src=/etc/nginx/sites-available/plexpy dest=/etc/nginx/sites-enabled/plexpy state=link
+  sudo: yes
+  notify: restart nginx

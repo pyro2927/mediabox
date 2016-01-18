@@ -4,13 +4,31 @@ Ansible scripts to automatically install:
 
 * [CouchPotato](https://couchpota.to/)
 * [Plex](https://plex.tv/)
+* [PlexPy](https://github.com/drzoidberg33/plexpy)
 * [Sickbeard](http://sickbeard.com/)
 * [Sonarr](https://sonarr.tv/)
 * [Transmission](http://www.transmissionbt.com/)
 
-### Access
+## Setup
 
-[nginx](http://nginx.org/en/) is used to route requests easily via subdomain. `couch.`, `plex.`, `sickbeard.`, `sonarr.` and `transmission.` subdomains allow you to access each service without having to remember what port they run on.
+### Virtual Machine
+
+Included is a `Vagrantfile` that will allow the easy setup of everything on a virtual machine.  Run `vagrant up` and you're good to go!
+
+### Other Machine
+
+To target a different machine, copy `provisioning/hosts.example` to `provisioning/hosts` and update it with the information of your already setup machine.
+
+    $ cd ./provisioning/
+    $ ansible-playbook playbook.yml
+
+*Note: these Ansible scripts assume they're targeting an Ubuntu machine*
+
+## Access
+
+[nginx](http://nginx.org/en/) is used to route requests easily via subdomain. `couch.`, `plex.`, `plexpy`, `sickbeard.`, `sonarr.` and `transmission.` subdomains allow you to access each service without having to remember what port they run on.
+
+## Misc
 
 ### Migrating Plex
 

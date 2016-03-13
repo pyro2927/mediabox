@@ -1,3 +1,7 @@
 ---
 - apt: name=nginx update_cache=yes
   sudo: yes
+
+- name: Install dashboard
+  copy: src=index.html dest=/usr/share/nginx/html/index.html
+  sudo: yes

@@ -2,6 +2,9 @@
 - apt_repository: repo='deb http://apt.sonarr.tv/ master main' state=present
   sudo: yes
 
+- name: super-ugly hack to allow unauthenticated packages to install
+  copy: content='APT::Get::AllowUnauthenticated "true";' dest=/etc/apt/apt.conf.d/99temp owner=root group=root mode=0644
+
 - apt: name=nzbdrone update_cache=yes
   sudo: yes
 

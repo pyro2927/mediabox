@@ -2,6 +2,9 @@
 - apt: name=nginx update_cache=yes
   sudo: yes
 
+- name: Ensures nginx html dir exists
+  file: path=/usr/share/nginx/html state=directory
+
 - name: Install dashboard
   copy: src=index.html dest=/usr/share/nginx/html/index.html
   sudo: yes

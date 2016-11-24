@@ -1,4 +1,10 @@
 ---
 - hosts: all
   roles:
+    - common
     - nginx
+    - couchpotato
+    - plex
+    - plexpy
+    - sonarr
+    - transmission

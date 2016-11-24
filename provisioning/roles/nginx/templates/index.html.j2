@@ -1,0 +1,26 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./main.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="fullheight" id="sidenav">
+    <ul>
+{% for tab in tabs %}
+      <li>
+        <a href="{{tab.url}}">
+          <i class="fa fa-{{tab.icon}} fa-lg" aria-hidden="true"></i>
+          {{tab.name}}
+        </a>
+      </li>
+{% endfor %}
+    </ul>
+  </div>
+  <div class="fullheight" id="content">
+    <iframe src="" frameborder="0"></iframe>
+  </div>
+</body>
+<script src="./jquery.js"></script>
+<script src="./main.js"></script>
+
+</html>

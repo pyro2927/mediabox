@@ -3,8 +3,18 @@
   sudo: yes
 
 - name: Ensures nginx html dir exists
-  file: path=/usr/share/nginx/html state=directory
+  file: path=/var/www/html/ state=directory
 
 - name: Install dashboard
-  copy: src=index.html dest=/usr/share/nginx/html/index.html
+  template: src=index.html.j2 dest=/var/www/html/index.html
   sudo: yes
+  notify: restart nginx
+
+- name: Install dashboard
+  copy: src={{item}} dest=/var/www/html/{{item}}
+  with_items:
+    - jquery.js
+    - main.js
+    - main.css
+  sudo: yes
+  notify: restart nginx

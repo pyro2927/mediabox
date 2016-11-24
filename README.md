@@ -11,6 +11,8 @@ Ansible scripts to automatically install:
 
 ## Setup
 
+Configure `provisioning/group_vars/all` with the tabs you want setup.  `icons` are taken from [FontAwesome](http://fontawesome.io/icons/).
+
 ### Virtual Machine
 
 Included is a `Vagrantfile` that will allow the easy setup of everything on a virtual machine.  Run `vagrant up` and you're good to go!

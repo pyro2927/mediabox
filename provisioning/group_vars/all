@@ -1,0 +1,14 @@
+---
+tabs:
+  - name: "Plex"
+    icon: "server"
+    url: "http://192.168.1.100:32400/web"
+  - name: "PlexPy"
+    icon: "feed"
+    url: "http://192.168.1.100:8181"
+  - name: "Sonarr"
+    icon: "tv"
+    url: "http://192.168.1.100:8989"
+  - name: "CouchPotato"
+    icon: "film"
+    url: "http://192.168.1.100:5050"
